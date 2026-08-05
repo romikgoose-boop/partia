@@ -1,0 +1,230 @@
+/* ===== ИМПОРТ ШРИФТОВ (Google Fonts) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* ===== ОБЩИЕ СБРОСЫ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #1e1e1e;
+    background: #f9f9f9;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== ВЕРХНЯЯ ПЛАНКА ===== */
+.site-header {
+    background: #b31b1b;
+    color: #fff;
+    padding: 14px 0;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== ГЕРОЙ ===== */
+.hero {
+    background: linear-gradient(135deg, #b31b1b 0%, #8a1414 100%);
+    color: #fff;
+    padding: 80px 0 70px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 40%, rgba(255, 215, 0, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+    font-weight: 300;
+    position: relative;
+}
+
+.hero .btn {
+    background: #ffc107;
+    color: #1e1e1e;
+    padding: 14px 44px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero .btn:hover {
+    background: #ffd54f;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== РАЗДЕЛЫ ===== */
+section {
+    padding: 70px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 45px;
+    color: #b31b1b;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #b31b1b;
+    margin: 12px auto 0;
+    border-radius: 4px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.15rem;
+    color: #555;
+    max-width: 700px;
+    margin: -25px auto 45px;
+}
+
+/* ===== О ПАРТИИ ===== */
+.about-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+    color: #2c2c2c;
+}
+
+.about-text .highlight {
+    font-weight: 500;
+    color: #b31b1b;
+}
+
+/* ===== ПРОГРАММА ===== */
+.program-section {
+    background: #f4f4f4;
+}
+
+.program-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.program-item {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border-left: 6px solid #b31b1b;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.program-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.program-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: #b31b1b;
+}
+
+.program-item p {
+    color: #444;
+    font-size: 0.98rem;
+}
+
+/* ===== ПОДВАЛ ===== */
+footer {
+    background: #1e1e1e;
+    color: #ccc;
+    padding: 40px 0 25px;
+    text-align: center;
+}
+
+footer .copy {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+    .hero p {
+        font-size: 1.1rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .program-list {
+        grid-template-columns: 1fr;
+    }
+    .site-header {
+        font-size: 1.3rem;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 0 50px;
+    }
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+    .site-header {
+        font-size: 1.1rem;
+    }
+}
